@@ -8,8 +8,7 @@ app = Flask(  # Create a flask app
 )
 
 
-username = "llo2ay"
-password = "123"
+allowed_users = {"daniel" : "danielep5" , "cor" : "corcorrect"}
 facebook_friends=["Loai","Yonathan","Adan", "George", "Fouad", "Celina"]
 
 
@@ -19,7 +18,7 @@ def login():
 		return render_template('login.html', error_msg="")
 	inputed_username = request.form['username']  
 	inputed_pass = request.form['password']
-	if (inputed_pass == password and username == inputed_username):
+	if (inputed_username in allowed_users and allowed_users[inputed_username] == inputed_pass ):
 		return redirect(url_for('home'))
 		
 	return render_template('login.html' , error_msg="INCORRECT PASSWORD OR USERNAME")
